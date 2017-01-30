@@ -49,6 +49,7 @@ namespace Animator
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.label1 = new System.Windows.Forms.Label();
+			this.checkBox1 = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -57,18 +58,18 @@ namespace Animator
 			// 
 			this.numericUpDown1.Location = new System.Drawing.Point(12, 229);
 			this.numericUpDown1.Minimum = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+									1,
+									0,
+									0,
+									0});
 			this.numericUpDown1.Name = "numericUpDown1";
 			this.numericUpDown1.Size = new System.Drawing.Size(33, 20);
 			this.numericUpDown1.TabIndex = 0;
 			this.numericUpDown1.Value = new decimal(new int[] {
-			1,
-			0,
-			0,
-			0});
+									1,
+									0,
+									0,
+									0});
 			// 
 			// button1
 			// 
@@ -108,11 +109,22 @@ namespace Animator
 			this.label1.TabIndex = 3;
 			this.label1.Text = "label1";
 			// 
+			// checkBox1
+			// 
+			this.checkBox1.Location = new System.Drawing.Point(101, 229);
+			this.checkBox1.Name = "checkBox1";
+			this.checkBox1.Size = new System.Drawing.Size(20, 24);
+			this.checkBox1.TabIndex = 4;
+			this.checkBox1.Text = "checkBox1";
+			this.checkBox1.UseVisualStyleBackColor = true;
+			this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1CheckedChanged);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(192, 261);
+			this.Controls.Add(this.checkBox1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.button1);
@@ -122,7 +134,7 @@ namespace Animator
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
-
 		}
+		private System.Windows.Forms.CheckBox checkBox1;
 	}
 }

@@ -20,6 +20,7 @@ namespace Animator
 	{
 		List<string> Sprites = new List<string>();
 		int i = 0;
+		bool Pong = false;
 		
 		public MainForm()
 		{
@@ -49,18 +50,45 @@ namespace Animator
 		}
 		void Timer1Tick(object sender, EventArgs e)
 		{
-			if (i>Sprites.Count - 1)
-			{
-				i=0;
+			if(!checkBox1.Checked){
+				if (i>Sprites.Count - 1)
+				{
+					i=0;
+				}
+				label1.Text = "Sprite" + i;
+				pictureBox1.BackgroundImage = Image.FromFile(Sprites[i]);
+				i++;
+			}else{
+				if(!Pong){
+					if (i>=Sprites.Count - 1)
+					{
+						i --;
+						Pong = true;
+					}
+					label1.Text = "Sprite" + i;
+					pictureBox1.BackgroundImage = Image.FromFile(Sprites[i]);
+					i++;
+				}else{
+					if (i < 1)
+					{
+						i++;
+						Pong = false;
+					}
+					label1.Text = "Sprite" + i;
+					pictureBox1.BackgroundImage = Image.FromFile(Sprites[i]);
+					i--;
+				}
 			}
-			label1.Text = "Sprite" + i;
-			pictureBox1.BackgroundImage = Image.FromFile(Sprites[i]);
-			i++;
 		}
 		void PictureBox1Click(object sender, EventArgs e)
 		{
 			Sprites.Clear();
 			openFileDialog1.ShowDialog();
+		}
+		
+		void CheckBox1CheckedChanged(object sender, EventArgs e)
+		{
+			
 		}
 	}
 }

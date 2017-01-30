@@ -32,5 +32,19 @@ namespace Helik
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		void Timer1Tick(object sender, System.EventArgs e)
+		{
+			
+		}
+		
+		void Button1Click(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void MainFormLoad(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }
