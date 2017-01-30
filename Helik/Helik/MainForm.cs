@@ -18,6 +18,9 @@ namespace Helik
 	/// </summary>
 	public partial class MainForm : Form
 	{
+		/// <summary>
+		/// sdsdsdsdsd
+		/// </summary>
 		public MainForm()
 		{
 			//
