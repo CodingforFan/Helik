@@ -18,6 +18,9 @@ namespace Animator
 	/// </summary>
 	public partial class MainForm : Form
 	{
+		List<string> Sprites = new List<string>();
+		int i = 0;
+		
 		public MainForm()
 		{
 			//
@@ -28,6 +31,36 @@ namespace Animator
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+		}
+		void OpenFileDialog1FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+		{
+			foreach (string a in openFileDialog1.FileNames)
+			{
+				Sprites.Add(a);
+			}
+		}
+		void Button1Click(object sender, EventArgs e)
+		{
+			if (Sprites.Count != 0) {
+			timer1.Interval = (int) numericUpDown1.Value * 100;
+			timer1.Enabled = true;
+			i = 0;
+			}
+		}
+		void Timer1Tick(object sender, EventArgs e)
+		{
+			if (i>Sprites.Count - 1)
+			{
+				i=0;
+			}
+			label1.Text = "Sprite" + i;
+			pictureBox1.BackgroundImage = Image.FromFile(Sprites[i]);
+			i++;
+		}
+		void PictureBox1Click(object sender, EventArgs e)
+		{
+			Sprites.Clear();
+			openFileDialog1.ShowDialog();
 		}
 	}
 }
