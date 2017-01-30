@@ -20,8 +20,6 @@ namespace Animator
 	{
 		List<string> Sprites = new List<string>();
 		int i = 0;
-		bool  Pong = false;
-		bool checker = false;
 		
 		public MainForm()
 		{
@@ -46,9 +44,6 @@ namespace Animator
 			if (Sprites.Count != 0) {
 			timer1.Interval = (int) numericUpDown1.Value * 100;
 			timer1.Enabled = true;
-			if (checkBox1.Checked == true) {
-				checker = true;
-			}
 			i = 0;
 			}
 		}
@@ -56,23 +51,11 @@ namespace Animator
 		{
 			if (i>Sprites.Count - 1)
 			{
-				if (checker){
-					Pong = true;
-				}else{
-					i=0;
-				}
+				i=0;
 			}
-			label1.Text = i + "/" + Sprites.Count;
+			label1.Text = "Sprite" + i;
 			pictureBox1.BackgroundImage = Image.FromFile(Sprites[i]);
-			if (Pong){
-				if (i == 0){
-					Pong = false;
-				} else {
-				i--;
-				}
-			} else {
-				i++;
-			}
+			i++;
 		}
 		void PictureBox1Click(object sender, EventArgs e)
 		{
