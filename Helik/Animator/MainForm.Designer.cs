@@ -56,24 +56,24 @@ namespace Animator
 			// 
 			// numericUpDown1
 			// 
-			this.numericUpDown1.Location = new System.Drawing.Point(12, 229);
+			this.numericUpDown1.Location = new System.Drawing.Point(12, 233);
 			this.numericUpDown1.Minimum = new decimal(new int[] {
-									1,
-									0,
-									0,
-									0});
+			1,
+			0,
+			0,
+			0});
 			this.numericUpDown1.Name = "numericUpDown1";
 			this.numericUpDown1.Size = new System.Drawing.Size(33, 20);
 			this.numericUpDown1.TabIndex = 0;
 			this.numericUpDown1.Value = new decimal(new int[] {
-									1,
-									0,
-									0,
-									0});
+			1,
+			0,
+			0,
+			0});
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(142, 229);
+			this.button1.Location = new System.Drawing.Point(142, 230);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(38, 23);
 			this.button1.TabIndex = 1;
@@ -86,7 +86,7 @@ namespace Animator
 			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox1.Location = new System.Drawing.Point(12, 13);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(168, 210);
+			this.pictureBox1.Size = new System.Drawing.Size(168, 183);
 			this.pictureBox1.TabIndex = 2;
 			this.pictureBox1.TabStop = false;
 			this.pictureBox1.Click += new System.EventHandler(this.PictureBox1Click);
@@ -103,19 +103,21 @@ namespace Animator
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(52, 229);
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(51, 235);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(84, 23);
+			this.label1.Size = new System.Drawing.Size(35, 13);
 			this.label1.TabIndex = 3;
 			this.label1.Text = "label1";
 			// 
 			// checkBox1
 			// 
-			this.checkBox1.Location = new System.Drawing.Point(101, 229);
+			this.checkBox1.AutoSize = true;
+			this.checkBox1.Location = new System.Drawing.Point(103, 234);
 			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(20, 24);
+			this.checkBox1.Size = new System.Drawing.Size(33, 17);
 			this.checkBox1.TabIndex = 4;
-			this.checkBox1.Text = "checkBox1";
+			this.checkBox1.Text = "P";
 			this.checkBox1.UseVisualStyleBackColor = true;
 			this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1CheckedChanged);
 			// 
@@ -126,14 +128,16 @@ namespace Animator
 			this.ClientSize = new System.Drawing.Size(192, 261);
 			this.Controls.Add(this.checkBox1);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.numericUpDown1);
+			this.Controls.Add(this.pictureBox1);
 			this.Name = "MainForm";
 			this.Text = "Animator";
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
+
 		}
 		private System.Windows.Forms.CheckBox checkBox1;
 	}

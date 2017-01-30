@@ -55,7 +55,7 @@ namespace Animator
 				{
 					i=0;
 				}
-				label1.Text = "Sprite" + i;
+				label1.Text = i + "/" + Sprites.Count;
 				pictureBox1.BackgroundImage = Image.FromFile(Sprites[i]);
 				i++;
 			}else{
@@ -65,7 +65,7 @@ namespace Animator
 						i --;
 						Pong = true;
 					}
-					label1.Text = "Sprite" + i;
+					label1.Text = i + "/" + Sprites.Count;
 					pictureBox1.BackgroundImage = Image.FromFile(Sprites[i]);
 					i++;
 				}else{
@@ -74,7 +74,7 @@ namespace Animator
 						i++;
 						Pong = false;
 					}
-					label1.Text = "Sprite" + i;
+					label1.Text = i + "/" + Sprites.Count;
 					pictureBox1.BackgroundImage = Image.FromFile(Sprites[i]);
 					i--;
 				}
