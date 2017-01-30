@@ -192,9 +192,9 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
-Game Launscher/bin/Debug/Game Launscher.exe
-SupportLibrary/obj/Debug/SupportLibrary.csprojResolveAssemblyReference.cache
-SupportLibrary/obj/Debug/SupportLibrary.csprojResolveAssemblyReference.cache
+Helik/bin/Debug/Helik.exe
+Animator/obj/Debug/Animator.csprojResolveAssemblyReference.cache
+Animator/obj/Debug/Animator.csprojResolveAssemblyReference.cache
 *.cache
 *.Cache
-Game Launscher/obj/Debug/Game Launscher.csproj.GenerateResource.Cache
+Helik/obj/Debug/Helik.csproj.GenerateResource.Cache
