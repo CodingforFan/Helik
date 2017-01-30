@@ -37,13 +37,13 @@ namespace Helik
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.Move = new System.Windows.Forms.Timer(this.components);
 			this.button1 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// timer1
+			// Move
 			// 
-			this.timer1.Tick += new System.EventHandler(this.Timer1Tick);
+			this.Move.Tick += new System.EventHandler(this.Timer1Tick);
 			// 
 			// button1
 			// 
@@ -69,6 +69,6 @@ namespace Helik
 			this.ResumeLayout(false);
 		}
 		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Timer timer1;
+		private System.Windows.Forms.Timer Move;
 	}
 }
