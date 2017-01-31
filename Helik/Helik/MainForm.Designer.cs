@@ -38,37 +38,34 @@ namespace Helik
 		{
 			this.components = new System.ComponentModel.Container();
 			this.Move = new System.Windows.Forms.Timer(this.components);
-			this.button1 = new System.Windows.Forms.Button();
+			this.Anim = new System.Windows.Forms.Timer(this.components);
 			this.SuspendLayout();
 			// 
 			// Move
 			// 
+			this.Move.Interval = 25;
 			this.Move.Tick += new System.EventHandler(this.Timer1Tick);
 			// 
-			// button1
+			// Anim
 			// 
-			this.button1.Location = new System.Drawing.Point(90, 90);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(20, 20);
-			this.button1.TabIndex = 1;
-			this.button1.Text = "button1";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.Button1Click);
+			this.Anim.Tick += new System.EventHandler(this.AnimTick);
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.ClientSize = new System.Drawing.Size(200, 200);
-			this.Controls.Add(this.button1);
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.ClientSize = new System.Drawing.Size(80, 142);
+			this.DoubleBuffered = true;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "MainForm";
 			this.Text = "Helik";
+			this.TransparencyKey = System.Drawing.SystemColors.ActiveCaption;
 			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.ResumeLayout(false);
 		}
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Timer Anim;
 		private System.Windows.Forms.Timer Move;
 	}
 }
