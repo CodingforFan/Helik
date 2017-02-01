@@ -75,7 +75,7 @@ namespace Helik
 				}	
 			}else{
 				doing = walkStand.Next(0, 100);
-				AnimPlay("Idle", 100, true, true);
+				AnimPlay("Idle", 130, true, true);
 			}
 		}
 		

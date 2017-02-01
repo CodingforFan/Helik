@@ -33,6 +33,7 @@ namespace Animator
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
 		void OpenFileDialog1FileOk(object sender, System.ComponentModel.CancelEventArgs e)
 		{
 			foreach (string a in openFileDialog1.FileNames)
@@ -40,6 +41,7 @@ namespace Animator
 				Sprites.Add(a);
 			}
 		}
+		
 		void Button1Click(object sender, EventArgs e)
 		{
 			if (Sprites.Count != 0) {
@@ -48,6 +50,7 @@ namespace Animator
 			i = 0;
 			}
 		}
+		
 		void Timer1Tick(object sender, EventArgs e)
 		{
 			if(!checkBox1.Checked){
@@ -80,6 +83,7 @@ namespace Animator
 				}
 			}
 		}
+		
 		void PictureBox1Click(object sender, EventArgs e)
 		{
 			Sprites.Clear();
